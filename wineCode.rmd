@@ -1,0 +1,37 @@
+---
+title: "Wine Analysis Task"
+author: "DGC"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Connect RStudio to Git client and initialize libraries
+
+```{r message=FALSE, warning=FALSE}
+#install.packages("usethis")
+library(usethis)
+library(magrittr)
+library(highcharter)
+library(explore)
+library(dplyr)
+library(DataExplorer)
+library(skimr)
+library(readr)
+# usethis::create_from_github(
+#  "https://github.com/dezzygc/WineData.git", destdir = "C:/Users/dezzy/Documents/happygit/wine_repo")
+```
+Import dataset
+
+```{r import dataset, results=FALSE, message=FALSE}
+wine_df <- read_csv("red_wine_data.csv")
+as_tibble(wine_df)
+```
+
+
+
