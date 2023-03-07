@@ -1,10 +1,13 @@
 ---
 title: "Wine Analysis Task"
 author: "DGC"
-date: "2023-03-04"
+date: "2023-03-06"
 output: 
   html_document: 
     keep_md: yes
+    theme: cerulean
+    toc: true
+    number_sections: true
 ---
 
 
@@ -32,6 +35,18 @@ Import dataset
 wine_df <- read_csv("red_wine_data.csv")
 as_tibble(wine_df)
 ```
+
+Generate exploratory html reports
+
+
+```r
+ #wine_df %>% explore()
+# wine_df %>% report(output_file = "report.html", output_dir = getwd())
+```
+
+
+#readthedown Theme (from rmdformats Package)
+
 
 
 
